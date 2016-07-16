@@ -1,0 +1,12 @@
+# Jekyll SEO Tag plugin
+title       : "Appgramming"
+description : "The minimalist app developer"
+author      : appgramming
+twitter:
+  username  : appgramming
+
+collections:
+  - reviews
+
+gems:
+  - jekyll-seo-tag

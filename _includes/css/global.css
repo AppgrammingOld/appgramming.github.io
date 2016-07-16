@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+body {
+    color: #333;
+    font-family: 'Titillium Web', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Main Global Blocks
+   ========================================================================== */
+
+/*
+ *  Jumbotron
+ */
+
+.jumbotron {
+    background-color: #383838;
+    background-image: url('/img/theme/backgrounds/jumbotron-background.png'), url('/img/theme/backgrounds/jumbotron-texture.jpg');
+    background-position: 50% 50%, 0% 0%;
+    background-size: auto, auto;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, scroll;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.jumbotron .box {
+    background: #222 url('/img/theme/backgrounds/jumbotron-box-texture.jpg') repeat;
+    border-color: #030303 #3c3c3c #3c3c3c #030303;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    padding: 2rem;
+}
+
+.jumbotron-shot {
+    margin: 0 auto;
+}
+
+/*
+ * Site Main
+ */
+
+.site-main {
+    background: #f1f1f1 url('/img/theme/backgrounds/site-main-texture.png');
+    padding: 2rem 0;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box {
+    background: #fff;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b3b3b3 white white #b3b3b3;
+    cursor: default;
+    height: 100%;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    transition: background-color 500ms ease, color 0ms ease;
+}
+
+.content-box-1:hover *, .content-box-2:hover *, .content-box-3:hover *, .content-box-4:hover *, .content-box-5:hover * {
+	color: #fff !important;
+}
+
+.content-box > *:last-child {
+    margin-bottom: 0;
+}
+
+.content-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+.content-box-1:hover {
+	background: red;
+}
+
+.content-box-1 .content-heading {
+	color: red;
+}
+
+.content-box-2:hover {
+	background: #ff4200;
+}
+
+.content-box-2 .content-heading {
+	color: #ff4200;
+}
+
+.content-box-3:hover {
+	background: #ff8200;
+}
+
+.content-box-3 .content-heading {
+	color: #ff8200;
+}
+
+.content-box-4:hover {
+	background: #7f007e;
+}
+
+.content-box-4 .content-heading {
+	color: #7f007e;
+}
+
+.content-box-5:hover {
+	background: #8b0202;
+}
+
+.content-box-5 .content-heading {
+	color: #8b0202;
+}
+
+/* ==========================================================================
+   Site Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: #c3c3c3;
+    background-image: url('/img/theme/backgrounds/footer-texture.png');
+    padding: 2rem 0;
+}

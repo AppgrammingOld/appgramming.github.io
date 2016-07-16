@@ -1,0 +1,13 @@
+.btn-secondary {
+    background: #000;
+    border-radius: 0;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 500ms ease;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    background: red;
+    color: #fff;
+}

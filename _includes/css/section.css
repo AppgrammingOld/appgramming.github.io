@@ -1,0 +1,9 @@
+.third-logos-box {
+    text-align: center;
+}
+
+.third-logo {
+    margin: 1rem 2rem;
+    max-height: 80px;
+    max-width: 160px;
+}
