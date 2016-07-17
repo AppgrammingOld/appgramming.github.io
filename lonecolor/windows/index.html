@@ -8,65 +8,40 @@ description     : CinemaDrape helps you focus on your current task, by instantly
 image           : /img/apps/cinemadrape/cinemadrape-jumbotron-shot.jpg
 ---
 
-<div class="row content-row">
-    <div class="col-lg-4">
-        <div class="content-box content-box-1">
-            <h2 class="content-heading">Color wallpapers</h2>
-            <p>
-                Solid color wallpapers may be a welcome, refreshing and modern change from the traditional photo wallpapers.
-                They also free up valuable memory and make PCs run faster. Use LoneColor to try one on your Desktop.
-            </p>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="content-box content-box-2">
-            <h2 class="content-heading">Just one click</h2>
-            <p>
-                LoneColor is very easy to use: simply drop the program or its shortcut on your Desktop and double-click it to
-                get a random color wallpaper. Or rename "LoneColor" to "LoneColor Pink", and run it to get a Pink wallpaper.
-            </p>
-        </div>
-    </div>
-    <div class="col-lg-4">
-        <div class="content-box content-box-3">
-            <h2 class="content-heading">No user interface</h2>
-            <p>
-                LoneColor has a minimal design and no user interface! To specify the color you want to use, just add its name or
-                code to the program name. It's like using command line parameters, but a lot easier. And less technical.
-            </p>
-        </div>
-    </div>
-</div>
+<section>
+    <div class="row content-row">
+        {% capture thecontent %}
+            <p>Solid color wallpapers may be a welcome, refreshing and modern change from the traditional photo wallpapers. They also free up valuable memory and make PCs run faster. Use LoneColor to try one on your Desktop.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="1" heading="Color wallpapers" %}
 
-<div class="row content-row">
-    <div class="col-lg-4">
-        <div class="content-box content-box-4">
-            <h2 class="content-heading">Clipboard talk</h2>
-            <p>
-                As a zero interface app, LoneColor has no windows! So it talks to the user using the... Clipboard. It writes
-                the color code of your wallpaper, or any error messages, to the Clipboard. To see them, paste anywhere.
-            </p>
-        </div>
+        {% capture thecontent %}
+            <p>LoneColor is very easy to use: simply drop the program or its shortcut on your Desktop and double-click it to get a random color wallpaper. Or rename "LoneColor" to "LoneColor Pink", and run it to get a Pink wallpaper.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="2" heading="Just one click" %}
+
+        {% capture thecontent %}
+            <p>LoneColor has a minimal design and no user interface! To specify the color you want to use, just add its name or code to the program name. It's like using command line parameters, but a lot easier. And less technical.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="3" heading="No user interface" %}
     </div>
-    <div class="col-lg-4">
-        <div class="content-box content-box-5">
-            <h2 class="content-heading">Works anywhere</h2>
-            <p>
-                If you are using a notebook and running a Starter Edition of Windows, you are stuck with the default
-                wallpaper. There is no option to change it. LoneColor can help you set a fast and clean solid color wallpaper.
-            </p>
-        </div>
+    <div class="row content-row">
+        {% capture thecontent %}
+            <p>As a zero interface app, LoneColor has no windows! So it talks to the user using the... Clipboard. It writes the color code of your wallpaper, or any error messages, to the Clipboard. To see them, paste anywhere.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="4" heading="Clipboard talk" %}
+
+        {% capture thecontent %}
+            <p>If you are using a notebook and running a Starter Edition of Windows, you are stuck with the default wallpaper. There is no option to change it. LoneColor can help you set a fast and clean solid color wallpaper.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="5" heading="Works anywhere" %}
+
+        {% capture thecontent %}
+            <p>Want to restore your old photo wallpaper? Rename "LoneColor" to "LoneColor C" (or create a "LoneColor C" shortcut), and run it to open the Desktop Background Control Panel, where you can easily undo changes.</p>
+        {% endcapture %}
+        {% include templates/standard-content-box.html index="1" heading="Easy to go back" %}
     </div>
-    <div class="col-lg-4">
-        <div class="content-box content-box-1">
-            <h2 class="content-heading">Easy to go back</h2>
-            <p>
-                Want to restore your old photo wallpaper? Rename "LoneColor" to "LoneColor C" (or create a "LoneColor C"
-                shortcut), and run it to open the Desktop Background Control Panel, where you can easily undo changes.
-            </p>
-        </div>
-    </div>
-</div>
+</section>
 
 <section class="content-box third-logos-box">
     <h2 class="content-heading">As featured in</h2>

@@ -18,12 +18,50 @@ a:focus, a:hover {
 }
 
 /* ==========================================================================
-   Main Global Blocks
+   Site Header
    ========================================================================== */
 
-/*
- *  Jumbotron
- */
+.site-header {
+    background: #f1f1f1 url('/img/theme/backgrounds/header-texture.png');
+    margin-bottom: 2px;
+}
+
+.header-logo {
+    max-width: 300px;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar .container {
+    position: relative;
+}
+
+.navbar .nav {
+    bottom: .25rem;
+    position: absolute;
+    right: 0;
+}
+
+.navbar .nav-link {
+    color: black;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0.4rem 1.6rem;
+    transition: background-color 500ms ease;
+}
+
+.navbar .nav-link:focus, .navbar .nav-link:hover {
+    background: black;
+    color: white;
+}
+
+
+/* ==========================================================================
+   Jumbotron
+   ========================================================================== */
 
 .jumbotron {
     background-color: #383838;
@@ -42,6 +80,29 @@ a:focus, a:hover {
     border-style: solid;
     border-width: 1px 1px 2px;
     padding: 2rem;
+}
+
+.jumbotron-heading {
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.jumbotron-heading .text-muted {
+    color: #fff;
+}
+
+.appname {
+    color: #fff;
+    display: block;
+    font-weight: 600;
+}
+
+.appname:focus, .appname:hover {
+    text-decoration: none;
+}
+
+.jumbotron-text {
+    margin-bottom: 2rem;
 }
 
 .jumbotron-shot {
@@ -76,9 +137,16 @@ a:focus, a:hover {
     cursor: default;
     height: 100%;
     margin-bottom: 2rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
     transition: background-color 500ms ease, color 0ms ease;
 }
+
+@media (min-width: 992px) {
+    .content-box {
+        padding: 2rem;
+    }
+}
+
 
 .content-box-1:hover *, .content-box-2:hover *, .content-box-3:hover *, .content-box-4:hover *, .content-box-5:hover * {
 	color: #fff !important;
