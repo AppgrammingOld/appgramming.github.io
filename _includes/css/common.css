@@ -1,32 +1,173 @@
-.btn-primary {
-    background-color: rgba(255, 0, 0, 0.90);
-    background-image: url('/img/theme/decoration/icon-down-arrow.png');
-    background-position: 94% 50%;
-    background-repeat: no-repeat;
-    background-size: auto 17px;
-    border: none;
-    font-size: 1.5em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    padding-right: 3rem;
-    transition: background-color 500ms ease;
+/*
+ * Content Boxes
+ */
+
+.content-box {
+	background-color: rgba(255, 255, 255, 0.90);
+	border-color: #b3b3b3 white white #b3b3b3;
+	border-style: solid;
+	border-width: 1px;
+	cursor: default;
+	padding: 1.5rem;
+	transition: background-color 500ms ease, color 0ms ease;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background-color: #ff8200;
+@media screen and (min-width: 480px) {
+	.content-box {
+		padding: 3rem;
+	}
 }
 
-.btn-secondary {
-    background: #000;
-    border-radius: 0;
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: background-color 500ms ease;
+@media screen and (min-width: 900px) {
+    .content-box {
+		padding: 2rem;
+	}
 }
 
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-    background: red;
-    color: #fff;
+.content-box-1:hover *, .content-box-2:hover *, .content-box-3:hover *, .content-box-4:hover *, .content-box-5:hover * {
+	color: #fff !important;
+}
+
+.content-box-1:hover {
+	background: red;
+}
+
+.content-box-1 .content-heading {
+	color: red;
+}
+
+.content-box-2:hover {
+	background: #ff4200;
+}
+
+.content-box-2 .content-heading {
+	color: #ff4200;
+}
+
+.content-box-3:hover {
+	background: #ff8200;
+}
+
+.content-box-3 .content-heading {
+	color: #ff8200;
+}
+
+.content-box-4:hover {
+	background: #7f007e;
+}
+
+.content-box-4 .content-heading {
+	color: #7f007e;
+}
+
+.content-box-5:hover {
+	background: #8b0202;
+}
+
+.content-box-5 .content-heading {
+	color: #8b0202;
+}
+
+/*
+ * Content Box Headings and Text
+ */
+
+.content-heading {
+	margin-top: 0;
+}
+
+.content-heading a {
+	color: inherit;
+}
+
+.content-box p:first-child {
+	margin-top: 0;
+}
+
+.content-box p:last-child {
+	margin-bottom: 0;
+}
+
+/*
+ * Links
+ */
+
+.link:hover, .link:focus {
+	text-decoration: underline;
+}
+
+.heading-link {
+	color: #fff;
+}
+
+.heading-link:hover, .heading-link:focus {
+	color: #f00;
+}
+
+/*
+ * Buttons
+ */
+
+.button {
+	background-color: black;
+	color: white;
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1rem;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 500ms ease;
+}
+
+@media screen and (min-width: 900px) {
+    .button {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+	.button {
+		font-size: 1.5rem;
+	}
+}
+
+.button-download {
+	background-color: rgba(255, 0, 0, 0.90);
+	background-image: url('/img/theme/decoration/icon-down-arrow.png');
+	background-position: 94% 50%;
+	background-size: auto 17px;
+	background-repeat: no-repeat;
+	border-radius: 4px;
+	padding: 0.75rem 2.5rem 0.75rem 1rem;
+}
+
+.button:hover {
+	background-color: red;
+}
+
+.button-download:hover {
+	background-color: #ff8200;
+}
+
+/*
+ * Social icons
+ */
+
+.social {
+	height: 32px;
+	margin-right: 0.5rem;
+	width: 32px;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.social-twitter {
+	background: #00aced;
+}
+
+.social-tumblr {
+	background: #36465D;
 }

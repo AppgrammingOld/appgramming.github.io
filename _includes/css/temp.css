@@ -1,0 +1,165 @@
+
+
+
+/**************************************
+ *	Header & Hero
+ *************************************/
+
+
+/**
+ * Site Hero
+ */
+
+
+.hero-title {
+	font-size: 2.5em;
+	font-weight: 600;
+	line-height: 1.1em;
+	margin: 0 0 0.7em 0;
+}
+
+
+
+.hero-screenshot {
+	border: 0.5em solid white;
+}
+
+
+/**************************************
+ *	Site Content
+ *************************************/
+
+
+
+
+
+
+
+
+
+
+.app-heading a {
+	color: #333;
+}
+
+.app-heading a:hover, .app-heading a:focus {
+	color: red;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*	Cool boxes													   */
+/*-----------------------------------------------------------------*/
+
+
+.coolbox.empty {
+	display: none;
+}
+
+
+
+
+/**
+ * Pages
+ */
+
+.page-title {
+	background: #222 url('/wp-content/uploads/images/theme/backgrounds/hero-texture.jpg');
+	border-top: 1px solid #030303;
+	border-right: 1px solid #3c3c3c;
+	border-bottom: 2px solid #3c3c3c;
+	border-left: 1px solid #030303;
+	color: white;
+	font-size: 2.25em;
+	font-weight: 700;
+	margin-bottom: 0.55em;
+	padding: 0.33em 1em;
+}
+
+.page-title a {
+	color: white;
+}
+
+.page-title a:hover, .page-title a:focus {
+	color: red;
+}
+
+.page-title.subtitle {
+	font-size: 1.75em;
+	line-height: 1.15em;
+}
+
+/**
+ * Special Content
+ */
+
+
+
+.onethird .button {
+	min-width: 9.5em;
+}
+
+/* Logos */
+
+.coolbox.logos {
+	padding: 1em 0 1em 0;
+	text-align: center;
+}
+
+
+
+/**
+ * Accessibility
+ */
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+
+
+
+.framedummy-screenshot:hover {
+	background-color: #ff8200;
+}
+
+
+
+
+/**************************************
+ *	Media Queries
+ *************************************/
+
+@media screen and (min-width: 900px) {
+	.coolbox.empty {
+		display: table-cell;
+	}
+}

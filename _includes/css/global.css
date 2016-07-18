@@ -2,8 +2,15 @@
    Base styles
    ========================================================================== */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
-    color: #333;
+	background: white;
+	color: #333;
+	font-size: 100%;
+	line-height: 1.4;
     font-family: 'Titillium Web', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -12,227 +19,196 @@ a {
 	text-decoration: none;
 }
 
-a:focus, a:hover {
-    color: red;
-    text-decoration: underline;
+h1 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 1.15;
+    margin-top: 0;
 }
+
+h1 b {
+	display: block;
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
 
 /* ==========================================================================
    Site Header
    ========================================================================== */
 
 .site-header {
-    background: #f1f1f1 url('/img/theme/backgrounds/header-texture.png');
-    margin-bottom: 2px;
+	background: #f1f1f1 url('/img/theme/backgrounds/header-texture.png');
+	margin-bottom: 2px;
+	padding: 2rem 0 1rem 0;
+	text-align: center;
 }
 
-.header-logo {
-    max-width: 300px;
+.site-header .logo {
+	width: 300px;
 }
 
-.navbar {
-    padding: 1rem;
+.site-header nav a {
+	color: black;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding: 0.5rem 1rem;
+	transition: background-color 500ms ease;
 }
 
-.navbar .container {
-    position: relative;
+.site-header nav {
+	margin-top: 1rem;
 }
 
-.navbar .nav {
-    bottom: .25rem;
-    position: absolute;
-    right: 0;
+.site-header nav a:hover, .site-header nav a:focus {
+	background-color: black;
+	color: white;
 }
 
-.navbar .nav-link {
-    color: black;
-    display: inline-block;
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 0.4rem 1.6rem;
-    transition: background-color 500ms ease;
-}
+@media screen and (min-width: 900px) {
+	.site-header {
+		padding: 1rem 0 0.75rem 0;
+	}
 
-.navbar .nav-link:focus, .navbar .nav-link:hover {
-    background: black;
-    color: white;
+	.site-header .container {
+		padding: 0 1.25rem;
+	}
+
+	.site-header .container:after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+
+	.site-header .info-container {
+		float: left;
+	}
+
+	.site-header .menu-container {
+		float: right;
+		padding-top: 1.25rem;
+	}
 }
 
 
 /* ==========================================================================
-   Jumbotron
+   Site Hero
    ========================================================================== */
 
-.jumbotron {
-    background-attachment: scroll, scroll;
-    background-color: #383838;
-    background-image: url('/img/theme/backgrounds/jumbotron-background.png'), url('/img/theme/backgrounds/jumbotron-texture.jpg');
-    background-position: 50% 50%, 0% 0%;
-    background-repeat: no-repeat, repeat;
-    background-size: auto, auto;
-    color: #fff;
-    margin-bottom: 0;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+.site-hero {
+	background-attachment: scroll, scroll;
+	background-color: #383838;
+	background-image: url('/img/theme/backgrounds/hero-background.png'), url('/img/theme/backgrounds/hero-texture.jpg');
+	background-position: 50% 50%, 0% 0%;
+	background-repeat: no-repeat, repeat;
+	background-size: auto, auto;
+	color: #fff;
+	padding: 1.5rem 0;
 }
 
-.jumbotron-row {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (min-width: 900px) {
+	.site-hero {
+		padding: 1.25rem 0 0 0;
+	}
 }
 
-.jumbotron-row > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
+.site-hero .content-box {
+	background: #222 url('/img/theme/backgrounds/hero-box-texture.jpg') repeat;
+	border-color: #030303 #3c3c3c #3c3c3c #030303;
+	border-width: 1px 1px 2px;
+    vertical-align: middle;
 }
 
-.jumbotron-box {
-    align-items: center;
-    background: #222 url('/img/theme/backgrounds/jumbotron-box-texture.jpg') repeat;
-    border-color: #030303 #3c3c3c #3c3c3c #030303;
-    border-style: solid;
-    border-width: 1px 1px 2px;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    padding: 2rem;
+.site-hero .twothirds {
+	margin-bottom: 0;
 }
 
-.jumbotron-box > *:last-child {
-    margin-bottom: 0;
-}
-
-.jumbotron-first-box {
-    margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-    .jumbotron-first-box {
-        margin-bottom: 0;
-    }
-}
-
-.jumbotron-heading {
-    line-height: 0.9;
-    margin-bottom: 1.5rem;
-}
-
-.jumbotron-heading .text-muted {
-    color: #fff;
-}
-
-.appname {
-    color: #fff;
-    display: block;
-    font-weight: 600;
-}
-
-.appname:focus, .appname:hover {
-    text-decoration: none;
-}
-
-.jumbotron-text {
-    margin-bottom: 1.5rem;
+.hero-text {
+	margin-bottom: 1.5rem;
 }
 
 
 /* ==========================================================================
-   Site Main
+   Site Content
    ========================================================================== */
 
 .site-main {
-    background: #f1f1f1 url('/img/theme/backgrounds/site-main-texture.png');
-    padding: 2rem 0;
+	background-color: #e7e7e7;
+	background-image: url('/img/theme/backgrounds/site-main-texture.png');
+	padding: 1.5rem 0;
 }
 
-.content-row {
-    display: flex;
-    flex-wrap: wrap;
+.container {
+	margin: 0 1rem;
+	max-width: 1140px;
 }
 
-.content-row > [class*='col-'] {
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 480px) {
+	.container {
+		margin: 0 2rem;
+	}
 }
 
-.content-box {
-    background: #fff;
-    background-color: rgba(255, 255, 255, 0.90);
-    border-style: solid;
-    border-width: 1px;
-    border-color: #b3b3b3 white white #b3b3b3;
-    cursor: default;
-    height: 100%;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    transition: background-color 500ms ease, color 0ms ease;
+@media screen and (min-width: 900px) {
+	.container {
+		margin: 0 auto;
+	}
 }
 
-@media (min-width: 768px) {
-    .content-box {
-        padding: 2rem 1rem;
-    }
+/*
+ * Rows and Columns
+ */
+
+.third, .onethird, .twothirds, .dummy-row {
+	margin-bottom: 1.5rem;
 }
 
-@media (min-width: 992px) {
-    .content-box {
-        padding: 2rem;
-    }
+.twothirds {
+	text-align: center;
+	vertical-align: middle;
 }
 
-.content-box-1:hover *, .content-box-2:hover *, .content-box-3:hover *, .content-box-4:hover *, .content-box-5:hover * {
-	color: #fff !important;
-}
+@media screen and (min-width: 900px) {
+	.row {
+		display: table;
+		border-collapse: separate;
+		border-spacing: 1.25rem;
+		margin-top: -1.25rem;
+		width: 100%;
+	}
 
-.content-box > *:last-child {
-    margin-bottom: 0;
-}
+    .dummy-row {
+		margin: 0 1.25rem 1.25rem 1.25rem;
+	}
 
-.content-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+	.third, .onethird, .twothirds {
+		display: table-cell;
+		margin-bottom: 0;
+		vertical-align: top;
+	}
 
+	.third {
+		width: 33.33%;
+	}
 
+	.onethird {
+		width: 32.66%;
+	}
 
-.content-box-1:hover {
-	background: red;
-}
-
-.content-box-1 .content-heading {
-	color: red;
-}
-
-.content-box-2:hover {
-	background: #ff4200;
-}
-
-.content-box-2 .content-heading {
-	color: #ff4200;
-}
-
-.content-box-3:hover {
-	background: #ff8200;
-}
-
-.content-box-3 .content-heading {
-	color: #ff8200;
-}
-
-.content-box-4:hover {
-	background: #7f007e;
-}
-
-.content-box-4 .content-heading {
-	color: #7f007e;
-}
-
-.content-box-5:hover {
-	background: #8b0202;
-}
-
-.content-box-5 .content-heading {
-	color: #8b0202;
+	.twothirds {
+		width: 67.33%;
+	}
 }
 
 /* ==========================================================================
@@ -240,7 +216,66 @@ a:focus, a:hover {
    ========================================================================== */
 
 .site-footer {
-    background-color: #c3c3c3;
-    background-image: url('/img/theme/backgrounds/footer-texture.png');
-    padding: 2rem 0;
+	background-color: #c3c3c3;
+	background-image: url('/img/theme/backgrounds/footer-texture.png');
+	padding: 2rem 0;
+}
+
+.site-footer .dummy-row {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.site-footer .logo {
+	width: 192px;
+}
+
+.site-footer .rights {
+	display: block;
+}
+
+.site-footer .button {
+	font-size: 1rem;
+	vertical-align: top;
+}
+
+@media screen and (min-width: 900px) {
+    .site-footer {
+		padding-bottom: 3rem;
+	}
+
+	.site-footer .dummy-row {
+		display: table;
+		width: 100%;
+	}
+
+	.site-footer li {
+		display: table-cell;
+	}
+
+	.site-footer-info {
+		padding-left: 1.25rem;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.site-footer .menu-container {
+		padding-right: 1.25rem;
+		text-align: right;
+		vertical-align: middle;
+	}
+
+	.site-footer .logo {
+		float: left;
+	}
+
+	.site-footer-info p {
+		margin: 0 0 0 220px;
+	}
+
+	.site-footer .rights {
+		display: inline-block;
+	}
 }

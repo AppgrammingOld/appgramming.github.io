@@ -1,9 +1,56 @@
-.third-logos-box {
-    text-align: center;
+
+.section-third-logos {
+	text-align: center;
 }
 
-.third-logo {
-    margin: 1rem 2rem;
-    max-height: 80px;
-    max-width: 160px;
+ul.logos {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.logos li {
+	padding: 1em 0;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 480px) {
+	ul.logos li {
+		display: inline-block;
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 900px) {
+ 	ul.logos li {
+		width: 24%;
+	}
+}
+
+ul.logos li.square {
+	display: inline-block;
+	width: 49%;
+}
+
+@media screen and (min-width: 600px) {
+	ul.logos li.square {
+		width: 24%;
+	}
+}
+
+.logos a {
+	display: inline-block;
+	max-width: 200px;
+	padding: 0 1em;
+}
+
+.logos img {
+	max-height: 80px;
+}
+
+.logos img.smaller {
+	max-height: 60px;
+}
+
+.logos img.larger {
+	max-height: 120px;
 }
