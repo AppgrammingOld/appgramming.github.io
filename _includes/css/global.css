@@ -64,27 +64,57 @@ a:focus, a:hover {
    ========================================================================== */
 
 .jumbotron {
+    background-attachment: scroll, scroll;
     background-color: #383838;
     background-image: url('/img/theme/backgrounds/jumbotron-background.png'), url('/img/theme/backgrounds/jumbotron-texture.jpg');
     background-position: 50% 50%, 0% 0%;
-    background-size: auto, auto;
     background-repeat: no-repeat, repeat;
-    background-attachment: scroll, scroll;
+    background-size: auto, auto;
     color: #fff;
     margin-bottom: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-.jumbotron .box {
+.jumbotron-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jumbotron-row > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.jumbotron-box {
+    align-items: center;
     background: #222 url('/img/theme/backgrounds/jumbotron-box-texture.jpg') repeat;
     border-color: #030303 #3c3c3c #3c3c3c #030303;
     border-style: solid;
     border-width: 1px 1px 2px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
     padding: 2rem;
+}
+
+.jumbotron-box > *:last-child {
+    margin-bottom: 0;
+}
+
+.jumbotron-first-box {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .jumbotron-first-box {
+        margin-bottom: 0;
+    }
 }
 
 .jumbotron-heading {
     line-height: 0.9;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .jumbotron-heading .text-muted {
@@ -102,16 +132,13 @@ a:focus, a:hover {
 }
 
 .jumbotron-text {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.jumbotron-shot {
-    margin: 0 auto;
-}
 
-/*
- * Site Main
- */
+/* ==========================================================================
+   Site Main
+   ========================================================================== */
 
 .site-main {
     background: #f1f1f1 url('/img/theme/backgrounds/site-main-texture.png');
@@ -137,8 +164,14 @@ a:focus, a:hover {
     cursor: default;
     height: 100%;
     margin-bottom: 2rem;
-    padding: 2rem 1rem;
+    padding: 2rem;
     transition: background-color 500ms ease, color 0ms ease;
+}
+
+@media (min-width: 768px) {
+    .content-box {
+        padding: 2rem 1rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -146,7 +179,6 @@ a:focus, a:hover {
         padding: 2rem;
     }
 }
-
 
 .content-box-1:hover *, .content-box-2:hover *, .content-box-3:hover *, .content-box-4:hover *, .content-box-5:hover * {
 	color: #fff !important;
